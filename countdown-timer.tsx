@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Calendar, Clock, Share2, Facebook, Twitter, MessageCircle, Send, Globe } from "lucide-react"
+import { Calendar, Clock, Share2, Facebook, Twitter, MessageCircle, Send, Globe, BookOpen, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { detectLanguage, translations, formatShareText, type Language } from "./lib/translations"
 import { HorrorEffects } from "./components/horror-effects"
 
@@ -230,6 +231,27 @@ export default function CountdownTimer() {
                 <div className="inline-flex items-center gap-2 bg-red-950/20 backdrop-blur-sm rounded-full px-6 py-3 border border-red-800/40">
                   <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></div>
                   <span className="text-red-100/90 font-medium">{t.updating}</span>
+                </div>
+              </div>
+
+              {/* 書籍連結區塊 */}
+              <div className="mt-8 text-center">
+                <div className="bg-gradient-to-br from-amber-950/30 to-orange-950/30 backdrop-blur-sm rounded-2xl p-6 border border-amber-700/50 shadow-lg shadow-amber-900/30">
+                  <h3 className="text-xl font-semibold text-amber-100 mb-4 flex items-center justify-center gap-2">
+                    <BookOpen className="h-5 w-5" />
+                    {t.bookTitle}
+                  </h3>
+                  <p className="text-amber-200/80 mb-6 text-sm md:text-base leading-relaxed">
+                    {t.bookDescription}
+                  </p>
+                  <Button
+                    onClick={() => window.open("https://www.facebook.com/photo/?fbid=24060920760210497&set=a.383492935046612", "_blank")}
+                    className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-medium px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                  >
+                    <BookOpen className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                    {t.readBook}
+                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Button>
                 </div>
               </div>
 

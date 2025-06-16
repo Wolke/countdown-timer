@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wolke.github.io/countdown-timer/sitemap.xml
+
+# 優化爬蟲對重要內容的理解
+# 龍樹諒預言倒數計時器 - 2025年7月5日台灣菲律賓香港板塊連結事件
+# Tatsuki Ryo Prophecy Countdown Timer - Taiwan Philippines Hong Kong Tectonic Connection Event July 5, 2025
+
+# 禁止爬蟲訪問不必要的文件
+Disallow: /_next/
+Disallow: /api/
+Disallow: *.json$

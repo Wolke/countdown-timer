@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://wolke.github.io/countdown-timer/</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://wolke.github.io/countdown-timer/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wolke.github.io/countdown-timer/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wolke.github.io/countdown-timer/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wolke.github.io/countdown-timer/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wolke.github.io/countdown-timer/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wolke.github.io/countdown-timer/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wolke.github.io/countdown-timer/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://wolke.github.io/countdown-timer/?lang=de" />
+  </url>
+</urlset>
