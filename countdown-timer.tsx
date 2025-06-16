@@ -80,10 +80,11 @@ export default function CountdownTimer() {
 
     switch (platform) {
       case "facebook":
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank")
+        // Facebook分享使用quote參數來傳遞描述文字
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, "_blank")
         break
       case "twitter":
-        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank")
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}&hashtags=龍樹諒,預言,台灣,倒數計時器`, "_blank")
         break
       case "line":
         window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, "_blank")
@@ -300,6 +301,16 @@ export default function CountdownTimer() {
                     <Send className="h-4 w-4" />
                     <span className="hidden sm:inline">WhatsApp</span>
                   </button>
+                </div>
+                
+                {/* 除錯工具鏈接 */}
+                <div className="mt-4">
+                  <a 
+                    href="/debug" 
+                    className="text-xs text-red-300/60 hover:text-red-300 transition-colors underline"
+                  >
+                    🔧 社群分享除錯工具
+                  </a>
                 </div>
               </div>
             </>

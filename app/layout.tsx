@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "龍樹諒預言倒數計時器",
     images: [
       {
-        url: "/countdown-og-image.png",
+        url: "https://wolke.github.io/countdown-timer/api/og",
         width: 1200,
         height: 630,
         alt: "龍樹諒預言2025年7月5日台灣菲律賓香港板塊連結倒數計時器",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "龍樹諒預言倒數計時器 | 2025年7月5日板塊連結預言",
     description: "根據龍樹諒預言，倒數至2025年7月5日。預言範圍涵蓋台灣、菲律賓、香港等地區的重大板塊連結事件。",
-    images: ["/countdown-og-image.png"],
+    images: ["https://wolke.github.io/countdown-timer/api/og"],
   },
   robots: {
     index: true,
@@ -65,10 +65,14 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1e1b4b" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* 地理位置標記 */}
         <meta name="geo.region" content="TW" />
         <meta name="geo.placename" content="Taiwan" />
         <meta name="geo.position" content="23.8;121.0" />
         <meta name="ICBM" content="23.8, 121.0" />
+        
+        {/* 文章標籤 */}
         <meta name="article:tag" content="龍樹諒" />
         <meta name="article:tag" content="預言" />
         <meta name="article:tag" content="台灣" />
@@ -76,6 +80,19 @@ export default function RootLayout({
         <meta name="article:tag" content="香港" />
         <meta name="article:tag" content="板塊連結" />
         <meta name="article:tag" content="2025年7月5日" />
+        
+        {/* Facebook 特定標籤 */}
+        <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:updated_time" content="2025-06-16T00:00:00Z" />
+        
+        {/* Twitter 特定標籤 */}
+        <meta name="twitter:site" content="@your_twitter_handle" />
+        <meta name="twitter:creator" content="@your_twitter_handle" />
+        
+        {/* 驗證標籤 */}
         <link rel="canonical" href="https://wolke.github.io/countdown-timer/" />
         <meta name="google-site-verification" content="[YOUR_GOOGLE_VERIFICATION_CODE]" />
         <meta name="msvalidate.01" content="[YOUR_BING_VERIFICATION_CODE]" />

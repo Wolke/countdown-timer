@@ -23,8 +23,10 @@
 ### 4. Open Graph 和 Twitter Cards
 - [x] **Facebook Open Graph**: 優化社群媒體分享外觀
 - [x] **Twitter Cards**: 支援 Twitter 分享卡片
-- [x] **社群媒體圖片**: 設定 OG 圖片（需要實際圖片檔案）
+- [x] **社群媒體圖片**: ~~設定 OG 圖片（需要實際圖片檔案）~~ 已使用動態生成的 OG 圖片
 - [x] **分享文字優化**: 每種語言都有專門的分享文字
+- [x] **Facebook 分享除錯**: 修復 Facebook 分享縮圖顯示問題
+- [x] **絕對 URL 路徑**: 使用完整 URL 確保外部平台能正確抓取圖片
 
 ### 5. 技術 SEO
 - [x] **Robots.txt**: 指引搜尋引擎爬蟲行為
@@ -41,6 +43,14 @@
 
 ## 🔧 需要手動完成的項目
 
+### 0. Facebook 分享縮圖修復 ✅
+- [x] **動態 OG 圖片**: 使用 Next.js ImageResponse API 生成精美的龍樹諒預言主題縮圖
+- [x] **絕對 URL 修復**: 修改 OG 圖片路徑使用完整 URL 而非相對路徑
+- [x] **Facebook 分享優化**: 修復 Facebook 分享 URL 參數，添加 quote 參數
+- [x] **除錯工具**: 創建 `/debug` 頁面用於測試社群分享功能
+- [x] **部署指南**: 創建詳細的 Facebook 縮圖問題解決指南
+- [ ] **生產環境測試**: 部署後使用 Facebook 分享除錯器驗證縮圖顯示
+
 ### 1. 搜尋引擎驗證
 - [ ] **Google Search Console**: 添加網站並驗證所有權
 - [ ] **Bing Webmaster Tools**: 添加網站並驗證所有權
@@ -48,7 +58,8 @@
 - [ ] **替換驗證碼**: 更新 layout.tsx 中的 `[YOUR_GOOGLE_VERIFICATION_CODE]` 和 `[YOUR_BING_VERIFICATION_CODE]`
 
 ### 2. 圖片和媒體
-- [ ] **創建 OG 圖片**: 設計 1200x630 的社群分享圖片 `/public/countdown-og-image.png`
+- [x] **創建 OG 圖片**: ~~設計 1200x630 的社群分享圖片 `/public/countdown-og-image.png`~~ 已改用動態生成 `/api/og`
+- [x] **動態 OG 圖片生成**: 使用 Next.js ImageResponse API 動態生成龍樹諒預言主題圖片
 - [ ] **網站圖標**: 創建適當的 favicon.ico
 - [ ] **多尺寸圖標**: 為不同裝置創建各種尺寸的圖標
 
