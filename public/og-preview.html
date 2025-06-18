@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .og-image {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0f0f23 0%, #1e1b4b 30%, #1e3a8a 70%, #dc2626 100%);
+            border: 4px solid #dc2626;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            margin: 0 auto;
+        }
+        .bg-circle1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 160px;
+            height: 160px;
+            background: rgba(220, 38, 38, 0.3);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        .bg-circle2 {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            width: 200px;
+            height: 200px;
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+        .main-title {
+            font-size: 72px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #fbbf24, #f59e0b, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .subtitle {
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .date-time {
+            font-size: 42px;
+            color: #fef3c7;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .time {
+            font-size: 36px;
+            color: #fed7aa;
+            margin-bottom: 40px;
+        }
+        .description {
+            font-size: 28px;
+            color: #e5e7eb;
+            margin-bottom: 20px;
+        }
+        .warning {
+            position: absolute;
+            bottom: 40px;
+            font-size: 24px;
+            color: #d1d5db;
+        }
+        .instructions {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>📸 Facebook OG 圖片預覽</h2>
+        <p><strong>尺寸：</strong>1200x630 (符合 Facebook 要求)</p>
+        <p><strong>使用方法：</strong></p>
+        <ol>
+            <li>在瀏覽器中按 Cmd+Shift+4 截圖，或使用截圖工具</li>
+            <li>將截圖保存為 <code>countdown-og-image.png</code></li>
+            <li>將圖片放到 <code>public/</code> 目錄</li>
+            <li>在 layout.tsx 中使用 <code>/countdown-og-image.png</code> 作為圖片路徑</li>
+        </ol>
+    </div>
+
+    <div class="og-image">
+        <div class="bg-circle1"></div>
+        <div class="bg-circle2"></div>
+        
+        <div class="main-title">龍樹諒預言</div>
+        <div class="subtitle">倒數計時器</div>
+        
+        <div class="date-time">2025年7月5日</div>
+        <div class="time">上午 4:18 分</div>
+        
+        <div class="description">🌏 台灣 • 菲律賓 • 香港 • 板塊連結預言</div>
+        
+        <div class="warning">⚠️ 預言倒數進行中 ⚠️</div>
+    </div>
+
+    <div class="instructions">
+        <h3>🔧 或者使用替代方案：</h3>
+        <p>如果不想手動截圖，可以在 layout.tsx 中使用相對路徑：</p>
+        <code>url: "/countdown-timer/countdown-og-image.svg"</code>
+        <p>但是某些社群平台可能不支援 SVG，建議還是使用 PNG 格式。</p>
+    </div>
+</body>
+</html>

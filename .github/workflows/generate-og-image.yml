@@ -1,0 +1,52 @@
+name: Generate OG Image
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # 允許手動觸發
+
+jobs:
+  generate-og-image:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pillow
+        
+    - name: Generate OG Image
+      run: |
+        python generate-og-image.py
+        
+    - name: Check if image was generated
+      run: |
+        if [ -f "public/countdown-og-image.png" ]; then
+          echo "✅ OG 圖片生成成功"
+          ls -la public/countdown-og-image.png
+        else
+          echo "❌ OG 圖片生成失敗"
+          exit 1
+        fi
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add public/countdown-og-image.png
+        if git diff --staged --quiet; then
+          echo "沒有變更需要提交"
+        else
+          git commit -m "🎨 自動生成 Facebook OG 分享圖片"
+          git push
+        fi

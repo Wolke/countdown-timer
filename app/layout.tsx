@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "龍樹諒預言倒數計時器",
     images: [
       {
-        url: "https://wolke.github.io/countdown-timer/api/og",
+        url: "https://wolke.github.io/countdown-timer/countdown-og-image.png",
         width: 1200,
         height: 630,
         alt: "龍樹諒預言2025年7月5日台灣菲律賓香港板塊連結倒數計時器",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "龍樹諒預言倒數計時器 | 2025年7月5日板塊連結預言",
     description: "根據龍樹諒預言，倒數至2025年7月5日。預言範圍涵蓋台灣、菲律賓、香港等地區的重大板塊連結事件。",
-    images: ["https://wolke.github.io/countdown-timer/api/og"],
+    images: ["https://wolke.github.io/countdown-timer/countdown-og-image.png"],
   },
   robots: {
     index: true,

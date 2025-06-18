@@ -49,6 +49,12 @@ Based on the prophetic dreams of Japanese manga artist Tatsuki Ryo (たつき諒
 - ⚡ 即時倒數更新
 - 🎭 主題切換支援 (明亮/黑暗模式)
 
+### 🤖 自動化 OG 圖片生成 | Automated OG Image Generation
+- 🔄 GitHub Actions 自動生成 Facebook 分享縮圖
+- 🎨 動態生成 1200x630 的高質量 PNG 圖片
+- 📱 完美支援所有社群媒體平台分享
+- ⚡ 推送代碼時自動更新圖片
+
 ## 安裝和運行 | Installation and Running
 
 ```bash

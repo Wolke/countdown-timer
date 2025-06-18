@@ -44,7 +44,10 @@
 ## 🔧 需要手動完成的項目
 
 ### 0. Facebook 分享縮圖修復 ✅
-- [x] **動態 OG 圖片**: 使用 Next.js ImageResponse API 生成精美的龍樹諒預言主題縮圖
+- [x] **動態 OG 圖片**: ~~使用 Next.js ImageResponse API 生成精美的龍樹諒預言主題縮圖~~ 已改用GitHub Action
+- [x] **GitHub Action 自動化**: 創建自動生成 OG 圖片的 GitHub Actions 工作流程
+- [x] **Python 腳本優化**: 改進 Python 腳本支援跨平台字體和環境
+- [x] **靜態網站相容**: 使用靜態 PNG 圖片，完美支援 GitHub Pages 部署
 - [x] **絕對 URL 修復**: 修改 OG 圖片路徑使用完整 URL 而非相對路徑
 - [x] **Facebook 分享優化**: 修復 Facebook 分享 URL 參數，添加 quote 參數
 - [x] **除錯工具**: 創建 `/debug` 頁面用於測試社群分享功能
@@ -59,7 +62,9 @@
 
 ### 2. 圖片和媒體
 - [x] **創建 OG 圖片**: ~~設計 1200x630 的社群分享圖片 `/public/countdown-og-image.png`~~ 已改用動態生成 `/api/og`
-- [x] **動態 OG 圖片生成**: 使用 Next.js ImageResponse API 動態生成龍樹諒預言主題圖片
+- [x] **動態 OG 圖片生成**: ~~使用 Next.js ImageResponse API 動態生成龍樹諒預言主題圖片~~ 已改用GitHub Action自動生成
+- [x] **GitHub Action 自動化**: 使用 Python + Pillow 在 GitHub Actions 中自動生成 OG 圖片
+- [x] **靜態圖片支援**: 生成適合靜態網站部署的 PNG 格式圖片
 - [ ] **網站圖標**: 創建適當的 favicon.ico
 - [ ] **多尺寸圖標**: 為不同裝置創建各種尺寸的圖標
 
